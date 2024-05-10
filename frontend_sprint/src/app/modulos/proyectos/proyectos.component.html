@@ -1,0 +1,54 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Proyectos</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Proyectos</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+  <section class="content">
+    <div class="container-fluid">
+        <!-- Contenido de la pagina Proyectos -->
+        <hr>
+        <input type="button" value="Insertar  Proyecto" class="btn btn-warning">
+        <!-- Formulario -->
+        <div id="formulario"></div>
+        <hr>
+        <div id="tabla">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                  <table class="table">
+
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Duracion</th>
+                        <th>Accion</th>
+                    </tr>
+                    <tr *ngFor="let item of proyecto">
+                      <td>{{item.nombre}}</td>
+                      <td>{{item.duracion}}</td>
+                      <td>
+                        <span class="fas fa-edit" style="color: blue;" title="Editar cursor: pointer" ></span>
+                        <span class="fas fa-minus-square" style="color: red; cursor: pointer;" title="Eliminar"></span> 
+                      </td>
+                    </tr>
+
+                </table>                    
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <div class="table-responsive">
+          
+            </div>
+        </div>
+    </div> 
+  </section>
